@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html class="no-js" lang="zxx">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title>Project | Atikur Rahman</title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Place favicon.ico in the root directory -->
+  <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico" />
+
+  <!-- CSS here -->
+  <link rel="stylesheet" href="assets/css/animate.css" />
+  <link rel="stylesheet" href="assets/css/font-awesome-pro.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <script>
+    if (
+      localStorage.getItem("color-theme") === "dark" ||
+      (!("color-theme" in localStorage) &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches)
+    ) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  </script>
+</head>
+
+<body class="dark:bg-body">
+  <!--[if lte IE 9]>
+      <p class="browserupgrade">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="https://browsehappy.com/">upgrade your browser</a> href improve
+        your experience and security.
+      </p>
+    <![endif]-->
+
+  <!-- Preloader Start-->
+
+  <div class="InitLoader">
+    <div class="fingerprint-spinner">
+      <div class="spinner-ring"></div>
+      <div class="spinner-ring"></div>
+      <div class="spinner-ring"></div>
+      <div class="spinner-ring"></div>
+      <div class="spinner-ring"></div>
+      <div class="spinner-ring"></div>
+      <div class="spinner-ring"></div>
+      <div class="spinner-ring"></div>
+      <div class="spinner-ring"></div>
+    </div>
+  </div>
+
+  <!-- preloader end -->
+
+  <!-- back href top start -->
+  <div class="progress-wrap">
+    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+      <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+    </svg>
+  </div>
+  <!-- back href top end -->
+
+  <!-- header-area-start -->
+
+  <header>
+    <div class="container mx-auto pt-[30px]">
+      <div class="flex justify-between rounded-[10px] bg-white py-[30px] dark:bg-card">
+        <div class="logo flex items-center px-[30px]">
+          <a href="index.html">
+            <img src="assets/images/logo-2.png" alt="" />
+          </a>
+        </div>
+        <nav class="hidden items-center md:flex">
+          <ul class="flex gap-4">
+            <li class="navDefault">
+              <a href="index.html"> Home </a>
+            </li>
+            <li class="navDefault">
+              <a href="about.html"> About Me </a>
+            </li>
+            <li class="w-[100px] navDefault">
+              <a href="contact.html">
+                <span class="typeIntro"></span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div>
+          <div class="flex items-center gap-4 px-[30px]">
+            <button id="theme-toggle" class="hidden md:flex" type="button">
+              <span class="flex gap-3 items-center">
+                <span>
+                  <span class="dark:text-white text-btn">Dark</span>
+                  <span class="dark:text-white text-btn">/</span>
+                  <span class="dark:text-white text-btn">Light</span>
+                </span>
+                <svg id="theme-toggle-dark-icon" class="hidden w-[30px] h-[30px] text-theme" fill="currentColor"
+                  viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                </svg>
+                <svg id="theme-toggle-light-icon" class="hidden w-[30px] h-[30px] text-theme" fill="currentColor"
+                  viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                    fill-rule="evenodd" clip-rule="evenodd"></path>
+                </svg>
+              </span>
+            </button>
+            <button class="sidebar-open rounded-full border border-[#919295] p-[10px] text-[25px]">
+              <i class="fa-solid fa-bars-staggered text-text dark:text-text block text-[20px]"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- header-area-end -->
+
+  <!-- sidebar area start -->
+  <section
+    class="sidebar fixed leftFull h-full overflow-y-scroll top-0 z-[999] w-full bg-btn/60 transition-all duration-500">
+    <div class="ml-auto w-[300px] h-full min-h-[750px] md:min-h-[700px] bg-white px-[30px] pt-[60px] dark:bg-card">
+      <div class="relative flex justify-center">
+        <button
+          class="sidebar-close group absolute left-[-70px] rounded-lg bg-white px-[15px] py-[10px] text-[26px] dark:bg-card">
+          <i
+            class="fa-solid block fa-xmark text-btn transition-all duration-500 group-hover:rotate-90 dark:text-white dark:group-hover:text-theme"></i>
+        </button>
+        <div>
+          <img src="assets/images/logo-2.png" alt="" />
+        </div>
+      </div>
+      <div class="my-[30px] border-t border-[#ddd] dark:border-btn"></div>
+      <nav class="mt-[30px]">
+        <ul class="grid gap-[18px]">
+          <li class="text-[18px] font-semibold inline-block navActive">
+            <a href="index.html"> Home </a>
+          </li>
+          <li class="text-[18px] font-semibold inline-block navDefault">
+            <a href="about.html"> About Us </a>
+          </li>
+          <li class="text-[18px] font-semibold inline-block navDefault">
+            <a href="projects.html"> Projects </a>
+          </li>
+          <li class="text-[18px] font-semibold inline-block navDefault">
+            <a href="contact.html"> Contact </a>
+          </li>
+          <li class="text-[18px] font-semibold inline-block navDefault">
+            <a href="error.html"> Error </a>
+          </li>
+        </ul>
+      </nav>
+      <div class="my-[30px] border-t border-[#ddd] dark:border-btn"></div>
+      <button id="theme-toggle-mobile" type="button" class="md:hidden">
+        <span class="flex gap-3 items-center">
+          <span>
+            <span class="dark:text-white text-btn">Dark</span>
+            <span class="dark:text-white text-btn">/</span>
+            <span class="dark:text-white text-btn">Light</span>
+          </span>
+          <svg id="theme-toggle-dark-icon-mobile" class="hidden w-[30px] h-[30px] text-theme" fill="currentColor"
+            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+          </svg>
+          <svg id="theme-toggle-light-icon-mobile" class="hidden w-[30px] h-[30px] text-theme" fill="currentColor"
+            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+              fill-rule="evenodd" clip-rule="evenodd"></path>
+          </svg>
+        </span>
+      </button>
+      <div class="contact mt-[40px] md:mt-[30px] pb-[20px]">
+        <div>
+          <p class="text-[20px] font-semibold text-btn dark:text-white">
+            Follow Me:
+          </p>
+
+          <div class="mt-[20px] flex gap-3">
+            <a href="#" class="block">
+              <i class="fa-brands fa-facebook-f socialIcon"></i>
+            </a>
+            <a href="#" class="block">
+              <i class="fa-brands fa-github socialIcon"></i>
+            </a>
+            <a href="#" class="block">
+              <i class="fa-brands fa-linkedin-in socialIcon"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- sidebar area end -->
+
+  <main>
+    <section>
+      <div class="container mx-auto">
+        <div class="grid grid-cols-12">
+          <div class="col-span-12 lg:col-span-3" data-wow-duration="1.5s" data-wow-delay="0.3s">
+            <div class="info-card mt-[60px]">
+              <div class="rounded-[20px] bg-white px-[45px] py-[40px] dark:bg-card">
+                <div class="relative flex justify-center wow animated fadeIn">
+                  <img src="assets/images/show/ProfileImage.png" alt="" class="w-[200px]" />
+                </div>
+                <div>
+                    <div class="mt-[25px]">
+                      <div class="text-center">
+                        <h3
+                          class="text-[24px] text-btn dark:text-white wow animated fadeIn"
+                        >
+                          Hy! I’m
+                          <span class="text-theme"> MD.ATIKUR RAHMAN</span>
+                        </h3>
+                        <p class="text-btn dark:text-white wow animated fadeIn">
+                          WEB DEVELOPER
+                        </p>
+                        <p
+                          class="mt-[25px] text-[14px] text-btn dark:text-white wow animated fadeIn"
+                        >
+                          atik.necit@gmail.com 
+                        </p>
+                        <p
+                          class="mt-1 text-[14px] text-btn dark:text-white wow animated fadeIn"
+                        >
+                          +88 01943 700042 
+                        </p>
+                        <div
+                          class="mt-[30px] flex justify-center gap-3 wow animated fadeIn"
+                        >
+                          <a href="#" class="block">
+                            <i class="fa-brands fa-facebook-f socialIcon"></i>
+                          </a>
+                          <a href="#" class="block">
+                            <i class="fa-brands fa-github socialIcon"></i>
+                          </a>
+                          <a href="#" class="block">
+                            <i class="fa-brands fa-linkedin-in socialIcon"></i>
+                          </a>
+                        </div>
+                        <div class="mt-[30px] wow animated fadeIn">
+                          <a
+                            href="contact.html"
+                            class="block rounded-full border-2 border-theme bg-theme py-[10px] font-medium text-btn transition-all duration-300 dark:hover:bg-transparent dark:hover:text-theme"
+                          >
+                            Hire Me!
+                          </a>
+                        </div>
+                        <div class="mt-[20px] wow animated fadeIn">
+                          <a
+                            download
+                            href="assets/pdf/Md.Atikur_Rahman_CV.pdf"
+                            class="block rounded-full border-2 border-btn bg-btn py-[10px] font-medium text-white transition-all duration-300 dark:hover:bg-transparent"
+                          >
+                            Download CV
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-span-12 lg:col-span-9 lg:ml-[30px]" data-wow-duration="1.5s" data-wow-delay="0.3s">
+            <div class="main__body">
+              <section class="mt-[60px]">
+                <!-- Project Intro  -->
+                <div class="rounded-xl bg-white px-[20px] py-[40px] dark:bg-card md:p-[40px]">
+                  <div>
+                    <h2
+                      class="text-[42px] wow animated fadeIn leading-[52px] text-btn dark:text-white md:text-[62px] md:leading-[72px]">
+                      Featured Projects<span class="text-theme">!</span>
+                    </h2>
+                    <p class="text-[14px] text-text wow animated fadeIn">
+                      Featured and popular products are the best-selling items
+                      for your product, product range, or company. However, a
+                      featured product could be a new product line or seasonal
+                      products instead.
+                    </p>
+                    <div class="mt-[60px]">
+                      <div class="grid grid-cols-12 md:gap-[30px]">
+                        <div class="col-span-12 mb-[40px] md:col-span-6 md:mb-0">
+                          <div class="boxShadow group rounded-xl bg-white p-[20px] dark:bg-btn dark:shadow-none">
+                            <div class="overflow-hidden rounded-lg wow animated fadeIn">
+                              <img src="assets/images/show/image-5.png" alt=""
+                                class="transition-all duration-500 group-hover:scale-[110%]" />
+                            </div>
+                            <div class="mb-[10px] mt-[20px]">
+                              <p class="text-[16px] text-text wow animated fadeIn">
+                                Restaurant Website Design
+                              </p>
+                              <a href=" ">
+                                <h2
+                                  class="mt-[14px] wow animated fadeIn inline-block text-[30px] leading-[40px] text-btn transition-all duration-300 hover:text-theme dark:text-white dark:hover:text-theme">
+                                  Restaurant Landing Page Design
+                                </h2>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-span-12 mb-[40px] md:col-span-6 md:mb-0">
+                          <div class="boxShadow group rounded-xl bg-white p-[20px] dark:bg-btn dark:shadow-none">
+                            <div class="overflow-hidden rounded-lg wow animated fadeIn">
+                              <img src="assets/images/show/image-6.png" alt=""
+                                class="transition-all duration-500 group-hover:scale-[110%]" />
+                            </div>
+                            <div class="mb-[10px] mt-[20px]">
+                              <p class="text-[16px] text-text wow animated fadeIn">
+                                Web Design & Development
+                              </p>
+                              <a href=" ">
+                                <h2
+                                  class="mt-[14px] wow animated fadeIn inline-block text-[30px] leading-[40px] text-btn transition-all duration-300 hover:text-theme dark:text-white dark:hover:text-theme">
+                                  Website Design and Development (ERP)
+                                </h2>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-span-12 mb-[40px] md:col-span-6 md:mb-0">
+                          <div class="boxShadow group rounded-xl bg-white p-[20px] dark:bg-btn dark:shadow-none">
+                            <div class="overflow-hidden rounded-lg wow animated fadeIn">
+                              <img src="assets/images/show/image-7.png" alt=""
+                                class="transition-all duration-500 group-hover:scale-[110%]" />
+                            </div>
+                            <div class="mb-[10px] mt-[20px]">
+                              <p class="text-[16px] text-text wow animated fadeIn">
+                                Restaurant Website Design
+                              </p>
+                              <a href=" ">
+                                <h2
+                                  class="mt-[14px] wow animated fadeIn inline-block text-[30px] leading-[40px] text-btn transition-all duration-300 hover:text-theme dark:text-white dark:hover:text-theme">
+                                  Restaurant Landing Page Design
+                                </h2>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-span-12 mb-[40px] md:col-span-6 md:mb-0">
+                          <div class="boxShadow group rounded-xl bg-white p-[20px] dark:bg-btn dark:shadow-none">
+                            <div class="overflow-hidden rounded-lg wow animated fadeIn">
+                              <img src="assets/images/show/image-8.png" alt=""
+                                class="transition-all duration-500 group-hover:scale-[110%]" />
+                            </div>
+                            <div class="mb-[10px] mt-[20px]">
+                              <p class="text-[16px] text-text wow animated fadeIn">
+                                Website Design
+                              </p>
+                              <a href=" ">
+                                <h2
+                                  class="mt-[14px] wow animated fadeIn inline-block text-[30px] leading-[40px] text-btn transition-all duration-300 hover:text-theme dark:text-white dark:hover:text-theme">
+                                  U-Mart BD – Your Ultimate eCommerce Solution!
+                                </h2>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-span-12 mb-[40px] md:col-span-6 md:mb-0">
+                          <div class="boxShadow group rounded-xl bg-white p-[20px] dark:bg-btn dark:shadow-none">
+                            <div class="overflow-hidden rounded-lg wow animated fadeIn">
+                              <img src="assets/images/show/image-9.png" alt=""
+                                class="transition-all duration-500 group-hover:scale-[110%]" />
+                            </div>
+                            <div class="mb-[10px] mt-[20px]">
+                              <p class="text-[16px] text-text wow animated fadeIn">
+                                Portfolio Website
+                              </p>
+                              <a href=" ">
+                                <h2
+                                  class="mt-[14px] wow animated fadeIn inline-block text-[30px] leading-[40px] text-btn transition-all duration-300 hover:text-theme dark:text-white dark:hover:text-theme">
+                                  Portfolio Website
+                                </h2>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-span-12 mb-[40px] md:col-span-6 md:mb-0">
+                          <div class="boxShadow group rounded-xl bg-white p-[20px] dark:bg-btn dark:shadow-none">
+                            <div class="overflow-hidden rounded-lg wow animated fadeIn">
+                              <img src="assets/images/show/image-10.png" alt=""
+                                class="transition-all duration-500 group-hover:scale-[110%]" />
+                            </div>
+                            <div class="mb-[10px] mt-[20px]">
+                              <p class="text-[16px] text-text wow animated fadeIn">
+                                UX / UI Design
+                              </p>
+                              <a href=" ">
+                                <h2
+                                  class="mt-[14px] wow animated fadeIn inline-block text-[30px] leading-[40px] text-btn transition-all duration-300 hover:text-theme dark:text-white dark:hover:text-theme">
+                                  Restaurant Mobile Application Figma Design
+                                </h2>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Pagination  -->
+
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- footer section one start -->
+  <footer data-wow-duration="1.5s" data-wow-delay="0.3s">
+    <div class="container mx-auto mt-[60px] flex justify-center pb-[40px]">
+      <div>
+        <p class="text-center text-text wow animated fadeIn">
+          Copyright <span class="text-theme">ATIK</span> &#169;  2025. All
+          rights reserved
+        </p>
+        <div class="mt-[20px] flex justify-center text-center wow animated fadeIn">
+          <img src="assets/images/logo.svg" alt="" />
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- footer section one end -->
+
+  <!-- JS here -->
+  <script src="assets/js/jquery.js"></script>
+  <script src="assets/js/waypoints.js"></script>
+  <script src="assets/js/backtotop.js"></script>
+  <script src="assets/js/counterup.js"></script>
+  <script src="assets/js/wow.js"></script>
+  <script src="assets/js/ajax-form.js"></script>
+  <script src="assets/js/typer.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>
