@@ -1,3 +1,66 @@
+<?php
+
+    include 'config.php';
+    session_start();
+    if (isset($_SESSION["email"])) {
+        header("Location: {$hostname}/admin/index.php");
+    }
+
+    if(isset($_COOKIE['email']) && isset($_COOKIE['password']))
+        {
+            $cookie_email = $_COOKIE['email'];
+            $cookie_password = $_COOKIE['password'];
+        }
+    else{
+        $cookie_email = "";
+        $cookie_password = "";
+    }
+
+    $msg = "";
+    if (isset($_POST['login'])) {
+
+    // include 'config.php';
+
+//    if ($_POST['username'] == "") {
+//        $usererror = 1;
+//    } else {
+        $email = mysqli_real_escape_string($conn, $_POST['email']);
+
+        $password = $_POST['password'];
+        // $password = md5($_POST['password']);
+
+        $sql = "SELECT id, email , password FROM admin_login where email = '{$email}' AND password = '{$password}'";
+
+        $result = mysqli_query($conn, $sql) or die("Query Failed");
+
+        if (mysqli_num_rows($result) > 0) {
+            while ($row = mysqli_fetch_assoc($result)) {
+                // session_start();
+                $_SESSION['email'] = $row['email'];
+                $_SESSION['user_id'] = $row['id'];
+                // $_SESSION['user_role'] = $row['role'];
+
+                if(isset($_POST['remember']))
+                    {
+                        setcookie('email', $_POST['email'], time() + (60*60*24));
+                        setcookie('password', $_POST['password'], time() + (60*60*24));
+                    }
+                else{
+                    setcookie('email', '', time() - (60*60*24));
+                    setcookie('password', '', time() - (60*60*24));
+                }
+
+                header("Location: {$hostname}/admin/index.php");
+            }
+        } else {
+             $msg = '<div class=" text-center alert alert-danger">Username And Password are Not Match</div>';
+            // $error = 1;
+        }
+//    }
+    
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -20,41 +83,44 @@
                                 <div class="card shadow-lg border-0 rounded-lg mt-5">
                                     <div class="card-header"><h3 class="text-center font-weight-light my-4">Login</h3></div>
                                     <div class="card-body">
-                                        <form>
+                                        <?php echo $msg ?>
+                                        <form action="<?php $_SERVER['PHP_SELF']; ?>" method="POST">
                                             <div class="form-group">
                                                 <label class="small mb-1" for="inputEmailAddress">Email</label>
-                                                <input class="form-control py-4" id="inputEmailAddress" type="email" placeholder="Enter email address" />
+                                                <input class="form-control py-4" id="inputEmailAddress" type="email" name="email" placeholder="Enter email address" value="<?= $cookie_email ?>" required/>
                                             </div>
                                             <div class="form-group">
                                                 <label class="small mb-1" for="inputPassword">Password</label>
-                                                <input class="form-control py-4" id="inputPassword" type="password" placeholder="Enter password" />
+                                                <input class="form-control py-4" id="inputPassword" type="password" name="password" placeholder="Enter password" value="<?= $cookie_password ?>" required/>
                                             </div>
                                             <div class="form-group">
                                                 <div class="custom-control custom-checkbox">
-                                                    <input class="custom-control-input" id="rememberPasswordCheck" type="checkbox" />
+                                                    <input class="custom-control-input" id="rememberPasswordCheck" type="checkbox" name="remember"/>
                                                     <label class="custom-control-label" for="rememberPasswordCheck">Remember password</label>
                                                 </div>
                                             </div>
                                             <div class="form-group d-flex align-items-center justify-content-between mt-4 mb-0">
                                                 <a class="small" href="password.html">Forgot Password?</a>
-                                                <a class="btn btn-primary" href="index.html">Login</a>
+                                                <!-- <a class="btn btn-primary" href="index.html">Login</a> -->
+                                                 <input type="submit" class="btn btn-primary" name="login">
                                             </div>
                                         </form>
                                     </div>
-                                    <div class="card-footer text-center">
+                                    <!-- <div class="card-footer text-center">
                                         <div class="small"><a href="register.html">Need an account? Sign up!</a></div>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                         </div>
                     </div>
                 </main>
             </div>
+            <!-- footer part start-->
             <div id="layoutAuthentication_footer">
-                <footer class="py-4 bg-light mt-auto">
+                <footer class="py-2 bg-light mt-auto">
                     <div class="container-fluid">
                         <div class="d-flex align-items-center justify-content-between small">
-                            <div class="text-muted">Copyright &copy; Your Website 2020</div>
+                            <div class="text-muted">Copyright &copy; Personal Website 2025</div>
                             <div>
                                 <a href="#">Privacy Policy</a>
                                 &middot;
@@ -64,6 +130,7 @@
                     </div>
                 </footer>
             </div>
+            <!-- footer part End-->
         </div>
         <script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
