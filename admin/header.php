@@ -93,6 +93,7 @@
                             <a class="nav-link" href="personaldetailslist.php">View Personal Details</a>
                             <a class="nav-link" href="workhistorylist.php">View Work History</a>
                             <a class="nav-link" href="serviceslist.php">View Services</a>
+                            <a class="nav-link" href="projectlist.php">View Projects</a>
                             </nav>
                             </div>
 
