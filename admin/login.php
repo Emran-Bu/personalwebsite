@@ -100,7 +100,7 @@
                                                 </div>
                                             </div>
                                             <div class="form-group d-flex align-items-center justify-content-between mt-4 mb-0">
-                                                <a class="small" href="password.html">Forgot Password?</a>
+                                                <a class="small" href="forgotpassword.php">Forgot Password?</a>
                                                 <!-- <a class="btn btn-primary" href="index.html">Login</a> -->
                                                  <input type="submit" class="btn btn-primary" name="login">
                                             </div>
@@ -119,13 +119,13 @@
             <div id="layoutAuthentication_footer">
                 <footer class="py-2 bg-light mt-auto">
                     <div class="container-fluid">
-                        <div class="d-flex align-items-center justify-content-between small">
+                        <div class="d-flex align-items-center justify-content-center small">
                             <div class="text-muted">Copyright &copy; Personal Website 2025</div>
-                            <div>
+                            <!-- <div>
                                 <a href="#">Privacy Policy</a>
                                 &middot;
                                 <a href="#">Terms &amp; Conditions</a>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </footer>

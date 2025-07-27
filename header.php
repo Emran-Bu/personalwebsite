@@ -4,12 +4,12 @@
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
-  <title>Home | Atikur Rahman</title>
+  <title>Home | Emran</title>
   <meta name="description" content="" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <!-- Place favicon.ico in the root directory -->
-  <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico" />
+  <link rel="shortcut icon" type="image/x-icon" href="assets/images/blue-e-md.png" />
 
   <!-- CSS here -->
   <link rel="stylesheet" href="assets/css/animate.css" />
@@ -67,8 +67,11 @@
     <div class="container mx-auto pt-[30px]">
       <div class="flex justify-between rounded-[10px] bg-white py-[30px] dark:bg-card">
         <div class="logo flex items-center px-[30px]">
-          <a href="index.html">
-            <img src="assets/images/logo-2.png" alt="pucu portfolio web template" />
+          <a href="index.php">
+            <!-- <img src="assets/images/logo-2.png" alt="pucu portfolio web template" /> -->
+             <div style="
+                        text-shadow: 0 1px 0 #CCCCCC, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
+                        color: #4CACE2; font-size:40px; letter-spacing:2px" id="demotext"><h1>EMRAN</h1></div>
           </a>
         </div>
         <nav class="hidden items-center md:flex">
@@ -147,11 +150,12 @@
           <li class="text-[18px] font-semibold inline-block navDefault">
             <a href="contact.html"> Contact </a>
           </li>
-          <li class="text-[18px] font-semibold inline-block navDefault">
+          <!-- <li class="text-[18px] font-semibold inline-block navDefault">
             <a href="error.html"> Error </a>
-          </li>
+          </li> -->
         </ul>
       </nav>
+
       <div class="my-[30px] border-t border-[#ddd] dark:border-btn"></div>
       <button id="theme-toggle-mobile" type="button" class="md:hidden">
         <span class="flex gap-3 items-center">
@@ -172,6 +176,7 @@
           </svg>
         </span>
       </button>
+      
       <div class="contact mt-[40px] md:mt-[30px] pb-[20px]">
         <div>
           <p class="text-[20px] font-semibold text-btn dark:text-white">
@@ -200,6 +205,7 @@
     <section>
       <div class="container mx-auto">
         <div class="grid grid-cols-12">
+          
           <div class="col-span-12 lg:col-span-3" data-wow-duration="1.5s" data-wow-delay="0.3s">
             <div class="info-card mt-[60px]">
               <div class="rounded-[20px] bg-white px-[45px] py-[40px] dark:bg-card">
@@ -256,209 +262,3 @@
               </div>
             </div>
           </div>
-          <div class="col-span-12 lg:col-span-9 lg:ml-[30px]" data-wow-duration="1.5s" data-wow-delay="0.3s">
-            <div class="main__body">
-              <section class="mt-[60px]">
-                <div class="rounded-xl bg-white p-[30px] dark:bg-card">
-                  <div>
-                    <p class="text-[18px] text-text wow animated fadeIn">
-                      <span class="dark:text-theme">Hi!</span> There I’m
-                    </p>
-                    <h2
-                      class="mt-[20px] wow animated fadeIn text-[50px] leading-[60px] text-btn dark:text-white md:text-[62px] md:leading-[72px]">
-                      Professional <span class="text-theme">FULL STACK</span>
-                      <br />
-                      Web Developer
-                    </h2>
-                    <p class="mt-[15px] text-text wow animated fadeIn">
-                      I am a Professional Front-end Web Developer and have
-                      been working in this field for more than 4 years. We are
-                      highly experts in converting PSD href HTML, PSD href
-                      Bootstrap, Figma href HTML, Sketch href HTML, and Xd
-                      href HTML ,CSS responsive design and pixel-perfect using
-                      bootstrap latest version, jQuery, JavaScript. I always
-                      take care of code with SEO friendly.
-                    </p>
-                  </div>
-                </div>
-
-                <!-- {/* About US */} -->
-
-                <div class="mt-[30px]">
-                  <div class="grid grid-cols-12 gap-[30px]">
-                    <div class="col-span-12 md:col-span-5">
-                      <div class="rounded-xl bg-white p-[30px] dark:bg-card">
-                        <img src="assets/images/logo.svg" alt="pucu portfolio web template"
-                          class="mt-[10px] wow animated fadeIn" />
-                        <div class="mt-[20px]">
-                          <p class="text-[14px] text-text dark:text-white wow animated fadeIn">
-                            More Specialized
-                          </p>
-                          <a href="about.html">
-                            <h3
-                              class="mt-[5px] wow animated fadeIn inline-block text-[26px] tracking-[6px] text-btn dark:text-white">
-                              About Me
-                            </h3>
-                          </a>
-                        </div>
-                      </div>
-                      <div>
-                        <div class="mt-[30px] rounded-xl bg-white p-[30px] dark:bg-card">
-                          <div class="flex gap-[20px] wow animated fadeIn">
-                            <button class="boxShadow rounded-lg p-[20px] dark:bg-btn dark:shadow-none">
-                              <img src="assets/images/icon/figma.png" alt="pucu portfolio web template" />
-                            </button>
-                            <button class="boxShadow rounded-lg p-[20px] dark:bg-btn dark:shadow-none">
-                              <img src="assets/images/icon/react.png" alt="pucu portfolio web template" />
-                            </button>
-                            <button class="boxShadow rounded-lg p-[20px] dark:bg-btn dark:shadow-none">
-                              <img src="assets/images/icon/php.png" alt="pucu portfolio web template" />
-                            </button>
-                          </div>
-
-                          <div class="mt-[30px]">
-                            <p class="text-[14px] text-text dark:text-white wow animated fadeIn">
-                              Specialization
-                            </p>
-                            <a href="service.html">
-                              <h3
-                                class="mt-[5px] wow animated fadeIn inline-block text-[26px] tracking-[6px] text-btn dark:text-white">
-                                Services Offer
-                              </h3>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="mt-[30px] rounded-xl bg-white p-[30px] dark:bg-card">
-                        <div class="grid grid-cols-12" data-wow-duration="1.5s" data-wow-delay="0.3s">
-                          <div class="col-span-6">
-                            <h2 class="text-[50px] font-semibold text-btn dark:text-theme wow animated fadeIn">
-                              <span class="counter">2</span>+
-                            </h2>
-                            <p class="text-text dark:text-white wow animated fadeIn">
-                              Years of <br />
-                              Experience
-                            </p>
-                          </div>
-                          <div class="col-span-6">
-                            <h2 class="text-[50px] font-semibold text-btn dark:text-theme wow animated fadeIn">
-                              <span class="counter">10</span>+
-                            </h2>
-                            <p class="text-text dark:text-white wow animated fadeIn">
-                              Project <br />
-                              Completed
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-span-12 md:col-span-7">
-                      <div class="rounded-xl bg-white p-[30px] dark:bg-card">
-                        <div class="flex justify-center gap-[20px]">
-                          <div class="overflow-hidden rounded-lg">
-                            <div>
-                              <img src="assets/images/show/project-1.1.jpg" alt="pucu portfolio web template"
-                                class="transition-all duration-300 hover:scale-[110%] wow animated fadeIn" />
-                            </div>
-                          </div>
-                          <div class="overflow-hidden rounded-lg">
-                            <div>
-                              <img src="assets/images/show/project-2.1.jpg" alt="pucu portfolio web template"
-                                class="transition-all duration-300 hover:scale-[110%] wow animated fadeIn" />
-                            </div>
-                          </div>
-                        </div>
-                        <div class="mt-[30px]">
-                          <p class="text-[14px] text-text dark:text-white wow animated fadeIn">
-                            Showcase View
-                          </p>
-                          <a href="projects.html">
-                            <h3
-                              class="mt-[5px] wow animated fadeIn inline-block text-[26px] tracking-[6px] text-btn dark:text-white">
-                              Projects
-                            </h3>
-                          </a>
-                        </div>
-                      </div>
-                      <div class="mt-[30px] grid grid-cols-12 gap-[30px]">
-                        <div class="col-span-6 rounded-xl bg-theme px-[30px] py-[25px]">
-                          <p class="text-[14px] text-btn wow animated fadeIn">
-                            Visit Our Blog
-                          </p>
-                          <a href="blog.html">
-                            <h3 class="mt-[5px] wow animated fadeIn inline-block text-[26px] tracking-[6px] text-btn">
-                              Blog
-                            </h3>
-                          </a>
-                        </div>
-                        <div class="hero-pattern col-span-6 rounded-xl bg-white px-[30px] py-[25px] dark:bg-card">
-                          <p class="text-[14px] text-text dark:text-white wow animated fadeIn">
-                            Let’s work
-                          </p>
-                          <a href="contact.html">
-                            <h3
-                              class="mt-[5px] wow animated fadeIn inline-block text-[26px] tracking-[6px] text-btn dark:text-white">
-                              Contact
-                            </h3>
-                          </a>
-                        </div>
-                      </div>
-                      <div class="mt-[30px]">
-                        <div
-                          class="relative flex h-[185px] items-end rounded-xl bg-cover bg-local bg-center wow animated fadeIn bg-no-repeat px-[30px] py-[30px]"
-                          style="
-                              background-image: url('assets/images/show/image-4.png');
-                            ">
-                          <div>
-                            <p class="text-[14px] text-white wow animated fadeIn">
-                              What Client Says?
-                            </p>
-                            <a href="testimonial.html">
-                              <h3 class="mt-[5px] wow animated fadeIn text-[26px] tracking-[6px] text-white">
-                                Testimonials
-                              </h3>
-                            </a>
-                            <img class="absolute right-[30px] top-[50px] z-10 wow animated fadeIn"
-                              src="assets/images/icon/shape.svg" alt="pucu portfolio web template" />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </section>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- footer section one start -->
-  <footer data-wow-duration="1.5s" data-wow-delay="0.3s">
-    <div class="container mx-auto mt-[60px] flex justify-center pb-[40px]">
-      <div>
-        <p class="text-center text-text wow animated fadeIn">
-          Copyright <span class="text-theme">ATIK</span> &#169;  2025. All
-          rights reserved
-        </p>
-        <div class="mt-[20px] flex justify-center text-center wow animated fadeIn">
-          <img src="assets/images/logo.svg" alt="pucu portfolio web template" />
-        </div>
-      </div>
-    </div>
-  </footer>
-  <!-- footer section one end -->
-
-  <!-- JS here -->
-  <script src="assets/js/jquery.js"></script>
-  <script src="assets/js/waypoints.js"></script>
-  <script src="assets/js/backtotop.js"></script>
-  <script src="assets/js/counterup.js"></script>
-  <script src="assets/js/wow.js"></script>
-  <script src="assets/js/ajax-form.js"></script>
-  <script src="assets/js/typer.js"></script>
-  <script src="assets/js/main.js"></script>
-</body>
-
-</html>
