@@ -29,7 +29,7 @@ include "header.php";
                     <?php
 
                     include 'config.php';
-                    $sql = "SELECT * FROM services";
+                    $sql = "SELECT * FROM experience";
 
                     $result = mysqli_query($conn, $sql) or die("Query Unsuccessful");
                     $serial = 1;
@@ -40,14 +40,9 @@ include "header.php";
                                         <thead>
                                             <tr>
                                                 <th>Id</th>
-                                                <th>Service Name</th>
-                                                <th>Service Title 1</th>
-                                                <th>Service Title 2</th>
-                                                <th>Service Title 3</th>
-                                                <th>Service Title 4</th>
-                                                <th>Service Title 5</th>
-                                                <th>Service Title 6</th>
-                                                <th>Service Image</th>
+                                                <th>Experience Name</th>
+                                                <th>Experience Percentage</th>
+                                                <th>Experience Number</th>
                                                 <th>Edit</th>
                                                 <th>Delete</th>
                                             </tr>
@@ -55,14 +50,9 @@ include "header.php";
                                         <tfoot>
                                             <tr>
                                                 <th>Id</th>
-                                                <th>Service Name</th>
-                                                <th>Service Title 1</th>
-                                                <th>Service Title 2</th>
-                                                <th>Service Title 3</th>
-                                                <th>Service Title 4</th>
-                                                <th>Service Title 5</th>
-                                                <th>Service Title 6</th>
-                                                <th>Service Image</th>
+                                                <th>Experience Name</th>
+                                                <th>Experience Percentage</th>
+                                                <th>Experience Number</th>
                                                 <th>Edit</th>
                                                 <th>Delete</th>
                                             </tr>
@@ -74,37 +64,32 @@ include "header.php";
                           <tr>
                               <!-- <td class='id'><?php //echo $row['post_id']; ?></td> -->
                               <td class='id'><?php echo $serial++ ?></td>
-                              <td><?php echo $row['servicename']; ?></td>
-                              <td><?php echo $row['servicetitle1']; ?></td>
-                              <td><?php echo $row['servicetitle2']; ?></td>
-                              <td><?php echo $row['servicetitle3']; ?></td>
-                              <td><?php echo $row['servicetitle4']; ?></td>
-                              <td><?php echo $row['servicetitle5']; ?></td>
-                              <td><?php echo $row['servicetitle6']; ?></td>
-                              <td><img height="100px" width="100px" src="assets/img/services/<?php echo $row['serviceimg']; ?>" alt=""></td>
-
-                              
-                              <td class='edit'><a href='update-services.php?id=<?php echo $row['id'];?>'><i class='fa fa-edit'></i></a></td>
+                              <td><?php echo $row['ename']; ?></td>
+                              <td><?php echo $row['epercentage']; ?></td>
+                              <td><?php echo $row['enumber']; ?></td>
+                            
+                              <td class='edit'><a href='update-experience.php?id=<?php echo $row['id'];?>'><i class='fa fa-edit'></i></a></td>
 
                               <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter<?php echo $row['id']; ?>"><i class='fa fa-trash-o'></i></button> </td>
+
                               <!-- modal -->
 
 <div class="modal fade" id="exampleModalCenter<?php if(isset($row['id'])){echo $row['id'];}?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalCenterTitle">Are You Sure Permanently Deleted This Service?</h5>
+        <h5 class="modal-title" id="exampleModalCenterTitle">Are You Sure Permanently Deleted This Experience?</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        <img height="100px" width="100px" src="assets/img/services/<?php if(isset($row['id'])){echo $row['serviceimg'];}?>" alt="">
+        <!-- <img height="100px" width="100px" src="assets/img/services/<?php if(isset($row['id'])){echo $row['serviceimg'];}?>" alt=""> -->
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         <!-- <button type="button" class="btn btn-primary">Delete</button> -->
-        <a class="btn btn-danger" href='delete-services.php?id=<?php if(isset($row['id'])){echo $row['id'];}?>'>Yes</a>
+        <a class="btn btn-danger" href='delete-experience.php?id=<?php if(isset($row['id'])){echo $row['id'];}?>'>Yes</a>
       </div>
     </div>
   </div>

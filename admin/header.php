@@ -26,7 +26,7 @@
     <body class="sb-nav-fixed">
          <!-- end header sidebar -->
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
-            <a class="navbar-brand" href="index.html">Personal Website</a>
+            <a class="navbar-brand" href="index.php">Personal Website</a>
             <button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#"><i class="fas fa-bars"></i></button>
             <!-- Navbar Search-->
             <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
@@ -71,14 +71,12 @@
                             </a>
                             <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
-                                    <!-- <a class="nav-link" href="layout-static.html">Static Navigation</a>
-                                    <a class="nav-link" href="layout-sidenav-light.html">Light Sidenav</a> -->
                                     <a class="nav-link" href="personaldetails.php">Add Personal Details</a>
                                     <a class="nav-link" href="addworkhistory.php">Add Work history</a>
                                     <a class="nav-link" href="addservices.php">Add Services</a>
                                     <a class="nav-link" href="addprojects.php">Add Projects</a>
-
-                                    <!-- <a class="nav-link" href="layout-sidenav-light.html">Light Sidenav</a> -->
+                                    <a class="nav-link" href="addexperience.php">Add Experience</a>
+                                    <a class="nav-link" href="addeducation.php">Add Education</a>
                                 </nav>
                             </div>
 
@@ -90,41 +88,24 @@
 
                             <div class="collapse" id="collapsePages" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
                             <nav class="sb-sidenav-menu-nested nav">
-                            <a class="nav-link" href="personaldetailslist.php">View Personal Details</a>
-                            <a class="nav-link" href="workhistorylist.php">View Work History</a>
-                            <a class="nav-link" href="serviceslist.php">View Services</a>
-                            <a class="nav-link" href="projectlist.php">View Projects</a>
+                                <a class="nav-link" href="personaldetailslist.php">View Personal Details</a>
+                                <a class="nav-link" href="workhistorylist.php">View Work History</a>
+                                <a class="nav-link" href="serviceslist.php">View Services</a>
+                                <a class="nav-link" href="projectlist.php">View Projects</a>
+                                <a class="nav-link" href="experiencelist.php">View Experience</a>
+                                <a class="nav-link" href="educationlist.php">View Education</a>
                             </nav>
                             </div>
 
-
-                            <!-- <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-parent="#sidenavAccordion">
-                                <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
-                                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">
-                                        Error
-                                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                                    </a>
-                                    <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne" data-parent="#sidenavAccordionPages">
-                                        <nav class="sb-sidenav-menu-nested nav">
-                                            <a class="nav-link" href="update-personaldetails.php">View Personal Details</a>
-                                        </nav>
-                                    </div>
-                                </nav>
-                            </div> -->
-
                             <div class="sb-sidenav-menu-heading">Addons</div>
-                            <a class="nav-link" href="charts.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
-                                Charts
-                            </a>
-                            <a class="nav-link" href="update-personaldetails.php">
-                                <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-                                Update personal details
-                            </a>
-                            <a class="nav-link" href="tables.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-                                Tables
-                            </a>
+                                <a class="nav-link" href="charts.php">
+                                    <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                                    Charts
+                                </a>
+                                <a class="nav-link" href="tables.php">
+                                    <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                                    Tables
+                                </a>
                         </div>
                     </div>
                     <div class="sb-sidenav-footer">

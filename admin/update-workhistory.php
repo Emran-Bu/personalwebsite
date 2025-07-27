@@ -63,7 +63,6 @@ include "header.php";
                                     <input class="form-control py-4" id="inputFirstName" type="text" placeholder="Enter number" name="number" value="<?php echo $row['number']; ?>"/>
                                 </div>
                             </div>
-                          </tr>
                           <?php  }} ?>
                         </div>
 
