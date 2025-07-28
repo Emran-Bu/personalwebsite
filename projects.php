@@ -42,10 +42,18 @@
                               <p class="text-[16px] text-text wow animated fadeIn">
                                 <?php echo $row['ptitle'];  ?>
                               </p>
-                              <a href=" ">
+                              <a href="<?php echo $row['plink'];  ?> " target="_blank">
                                 <h2
                                   class="mt-[14px] wow animated fadeIn inline-block text-[30px] leading-[40px] text-btn transition-all duration-300 hover:text-theme dark:text-white dark:hover:text-theme">
                                   <?php echo $row['pname'];  ?>
+                                </h2>
+                              </a>
+                            </div>
+                            <div class="mb-[8px] mt-[20px]">
+                              <a href="<?php echo $row['pclink'];  ?> " target="_blank">
+                                <h2
+                                  class="mt-[14px] wow animated fadeIn inline-block text-[20px] leading-[40px] text-theme transition-all duration-300 hover:text-theme dark:text-white dark:hover:text-theme">
+                                  Source Code
                                 </h2>
                               </a>
                             </div>

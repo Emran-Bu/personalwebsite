@@ -40,7 +40,10 @@
             <!-- Navbar-->
             <ul class="navbar-nav ml-auto ml-md-0">
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" id="userDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
+                    <a title="Close" class="nav-link dropdown-toggle" id="userDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <!-- <i class="fas fa-user fa-fw"></i> -->
+                        <i class="fas fa-power-off"></i>
+                    </a>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
                         <!-- <a class="dropdown-item" href="#">Settings</a> -->
                         <!-- <a class="dropdown-item" href="#">Activity Log</a> -->
@@ -178,11 +181,11 @@
                             </div> -->
 
                             <!-- <div class="sb-sidenav-menu-heading">Addons</div> -->
-                                <a class="nav-link" href="viewcustomercontact.php">
+                                <a class="nav-link" href="customer_contact_message.php">
                                     <div class="sb-nav-link-icon"><i class="fas fa-envelope-open"></i></div>
-                                    Customer Contact
+                                    Customer Message
                                 </a>
-                                <a class="nav-link" href="profilesettings.php">
+                                <a class="nav-link" href="profilesetting.php">
                                     <div class="sb-nav-link-icon"><i class="fas fa-key"></i></div>
                                     Profile Settings
                                 </a>

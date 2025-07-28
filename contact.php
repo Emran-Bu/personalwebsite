@@ -1,6 +1,27 @@
 
 
-                       <?php include('header.php'); include('admin/config.php');?>
+ <?php include('header.php');
+ 
+
+ if (isset($_POST['submit'])) {
+include('admin/config.php');
+    $cname = mysqli_real_escape_string($conn, $_POST['cname']);
+    $cemail = mysqli_real_escape_string($conn, $_POST['cemail']);
+    $cwlink = mysqli_real_escape_string($conn, $_POST['cwlink']);
+    $cmessage = mysqli_real_escape_string($conn, $_POST['cmessage']);
+
+    $sql = "INSERT INTO contact (cname, cemail, cwlink, cmessage) values ('{$cname}', '{$cemail}', '{$cwlink}', '{$cmessage}')";
+
+    if (mysqli_query($conn, $sql)) {
+        $msg = '<div style="color: blue; margin-bottom: 10px;" class=" text-center alert alert-success">Successfully Sent Your Message</div>';
+        // header("location: {$hostname}/admin/personaldetailslist.php");
+    } else {
+        $msg = '<div style="color: red; margin-bottom: 10px;" class=" text-center alert alert-danger">Not Sent Your Message</div>';
+    }
+}
+ 
+ 
+ ?>
          <!-- end of all header part -->
             <div
               class="col-span-12 lg:col-span-9 lg:ml-[30px]"
@@ -10,6 +31,7 @@
               <div class="main__body">
                 <section class="mt-[60px]">
                   <!-- contact Intro  -->
+
                   <div class="rounded-xl bg-white p-[30px] dark:bg-card">
                     <div>
                       <h2
@@ -23,11 +45,17 @@
                       </p>
                       <div class="mb-[30px] mt-[30px]">
                         <div>
+                          <?php if(isset($msg)){ echo $msg; } ?>
                           <div>
-                            <form
+                            <!-- <form
                               id="contact-form"
                               class="contact-form"
                               action="mail.php"
+                              method="POST"
+                            > -->
+                            <form
+                              class="contact-form"
+                              action="<?php $_SERVER['PHP_SELF']; ?>"
                               method="POST"
                             >
                               <div
@@ -39,8 +67,8 @@
                                     type="text"
                                     placeholder="Enter Your Name"
                                     id="name"
-                                    name="name"
-                                    required="required"
+                                    name="cname"
+                                    required = "required"
                                   />
                                 </div>
                                 <div class="md:w-1/2">
@@ -48,8 +76,8 @@
                                     class="block w-full rounded-lg border bg-white px-[15px] py-[10px] text-btn focus:outline-none dark:border-none dark:bg-btn dark:text-white"
                                     type="email"
                                     id="email"
-                                    name="email"
-                                    required="required"
+                                    name="cemail"
+                                    required = "required"
                                     placeholder="Enter Your Email"
                                   />
                                 </div>
@@ -60,22 +88,23 @@
                                   placeholder="Website Link:"
                                   type="url"
                                   id="website"
-                                  name="website"
-                                  required="required"
+                                  name="cwlink"
+                                  required = "required"
                                 />
                               </div>
                               <div class="mt-[20px] wow animated fadeIn">
                                 <textarea
-                                  name="message"
+                                  name="cmessage"
                                   id="massage"
                                   placeholder="Enter Your Massage"
                                   required
                                   cols="30"
                                   rows="6"
+                                  require = "required"
                                   class="block w-full rounded-lg border bg-white px-[15px] py-[10px] text-btn focus:outline-none dark:border-none dark:bg-btn dark:text-white"
                                 ></textarea>
                               </div>
-                              <div>
+                              <!-- <div>
                                 <div
                                   class="mb-6 mt-[20px] flex items-start wow animated fadeIn"
                                 >
@@ -98,17 +127,20 @@
                                     </label>
                                   </div>
                                 </div>
-                              </div>
-                              <div class="mb-[30px] wow animated fadeIn">
+                              </div> -->
+                              <div class="mt-[30px] wow animated fadeIn">
+
+                              <!-- <input class="rounded-full border-2 border-theme bg-theme px-[30px] py-[10px] font-medium text-btn transition-all duration-300 dark:hover:bg-transparent dark:hover:text-theme" name="submit" type="submit" value="Send Massage"/> -->
+
+                              <!-- <input class="rounded-full border-2 border-theme bg-theme px-[30px] py-[10px] font-medium text-btn transition-all duration-300 dark:hover:bg-transparent dark:hover:text-theme" name="submit" type="submit" value="Send Massage"/> -->
                                 <button
+                                name="submit"
                                   type="submit"
                                   class="rounded-full border-2 border-theme bg-theme px-[30px] py-[10px] font-medium text-btn transition-all duration-300 dark:hover:bg-transparent dark:hover:text-theme"
                                 >
                                   Send Massage
                                 </button>
-                                <p
-                                  class="mt-[15px] text-theme form-Messages"
-                                ></p>
+                                <!-- <p class="mt-[15px] text-theme form-Messages"></p> -->
                               </div>
                             </form>
                           </div>

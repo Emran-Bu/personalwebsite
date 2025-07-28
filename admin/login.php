@@ -79,19 +79,32 @@
                 <main>
                     <div class="container">
                         <div class="row justify-content-center">
-                            <div class="col-lg-5">
+                            <div class="col-lg-5 mb-5">
                                 <div class="card shadow-lg border-0 rounded-lg mt-5">
-                                    <div class="card-header"><h3 class="text-center font-weight-light my-4">Login</h3></div>
+                                    <div class="justify-content-center d-flex mt-4"><img class="card-img-top" style="height:150px ; width: 150px"  src="assets/img/normal/user.png" alt="" srcset=""></div>
+                                    <div class="card-header"><h3 class="text-center font-weight-light my-2">Login</h3></div>
                                     <div class="card-body">
                                         <?php echo $msg ?>
-                                        <form action="<?php $_SERVER['PHP_SELF']; ?>" method="POST">
+                                        <form action="<?php $_SERVER['PHP_SELF']; ?>" method="POST" autocomplete="off">
                                             <div class="form-group">
                                                 <label class="small mb-1" for="inputEmailAddress">Email</label>
-                                                <input class="form-control py-4" id="inputEmailAddress" type="email" name="email" placeholder="Enter email address" value="<?= $cookie_email ?>" required/>
+                                                <input class="form-control py-4" id="inputEmailAddress" type="email" name="email" placeholder="Enter email address" value="<?= $cookie_email ?> " autocomplete="off"  required/>
                                             </div>
                                             <div class="form-group">
                                                 <label class="small mb-1" for="inputPassword">Password</label>
-                                                <input class="form-control py-4" id="inputPassword" type="password" name="password" placeholder="Enter password" value="<?= $cookie_password ?>" required/>
+
+                                                <div style="position: relative; display:flex;">
+                                                <input  class="form-control py-4" id="inputPassword" type="password" name="password" placeholder="Enter password" value="<?= $cookie_password ?>" required/>
+                                                <i id="eye" style="    position: absolute;
+                                                    top: 50%;
+                                                    right: 10px;
+                                                    transform: translateY(-50%);
+                                                    cursor: pointer;
+                                                    font-size: 1.5rem;
+                                                ;" class="fa fa-eye"></i>
+                                                <!-- fa fa-eye-slash -->
+                                                </div>
+                                                
                                             </div>
                                             <div class="form-group">
                                                 <div class="custom-control custom-checkbox">
@@ -120,7 +133,7 @@
                 <footer class="py-2 bg-light mt-auto">
                     <div class="container-fluid">
                         <div class="d-flex align-items-center justify-content-center small">
-                            <div class="text-muted">Copyright &copy; Personal Website 2025</div>
+                            <div class="text-muted">Copyright <span class="text-info">EMRAN</span> &copy; Personal Website 2025</div>
                             <!-- <div>
                                 <a href="#">Privacy Policy</a>
                                 &middot;
@@ -132,8 +145,41 @@
             </div>
             <!-- footer part End-->
         </div>
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
         <script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+
+<script>
+            $(document).ready(function(){
+                const password = $('#inputPassword');
+                $('#eye').click(function(){
+                    // console.log('dfdsfds');
+                    if (password.prop('type') == 'password') {
+                        $(this).css("color", "red");
+                        password.attr('type', 'text');
+                        
+                        
+                    } else {
+                        $(this).css("color", "black");
+                        password.attr('type', 'password');
+                        
+                    }
+                })
+                // $('#eye').click(function(){
+                //     if (password.prop('type') == 'password') {
+                //         $(this).addClass('fa-eye-slash');
+                //         password.attr('type', 'text');
+                //     } 
+                //     else {
+                //         console.log('hhh')
+                //         // $(this).removeClass('fa-eye-slash');
+                //         password.attr('type', 'password');
+                //     }
+                // })
+            })
+        </script>
+
         <script src="js/scripts.js"></script>
+        
     </body>
 </html>

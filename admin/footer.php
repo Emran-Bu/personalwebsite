@@ -4,7 +4,7 @@
                  <footer class="py-4 bg-light mt-auto">
                     <div class="container-fluid">
                         <div class="d-flex align-items-center justify-content-center small">
-                            <div class="text-muted">Copyright &copy; Your Website 2025</div>
+                            <div class="text-muted"> Copyright <span class="text-info">EMRAN</span> &copy; Your Website 2025</div>
                             <!-- <div>
                                 <a href="#">Privacy Policy</a>
                                 &middot;

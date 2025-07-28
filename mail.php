@@ -12,7 +12,7 @@
         $message = trim($_POST["message"]);
 
         // Check that data was sent to the mailer.
-        if ( empty($name) OR empty(website) OR empty($message) OR !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        if ( empty($cname) OR empty($website) OR empty($message) OR !filter_var($email, FILTER_VALIDATE_EMAIL)) {
             // Set a 400 (bad request) response code and exit.
             http_response_code(400);
             echo "Please complete the form and try again.";
