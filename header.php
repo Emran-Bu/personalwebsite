@@ -70,20 +70,19 @@
           <a href="index.php">
             <!-- <img src="assets/images/logo-2.png" alt="pucu portfolio web template" /> -->
              <div style="
-                        text-shadow: 0 1px 0 #CCCCCC, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
-                        color: #4CACE2; font-size:40px; letter-spacing:2px" id="demotext"><h1>EMRAN</h1></div>
+                        color: rgba(0,0,0,0.6); text-shadow: 2px 8px 6px rgba(0,0,0,0.2), 0px -5px 35px rgba(255,255,255,0.3); font-size: 30px; letter-spacing:2px" id="demotext"><h1>Portfolio</h1></div>
           </a>
         </div>
         <nav class="hidden items-center md:flex">
           <ul class="flex gap-4">
             <li class="navActive">
-              <a href="index.html"> Home </a>
+              <a href="index.php"> Home </a>
             </li>
             <li class="navDefault">
-              <a href="about.html"> About Me </a>
+              <a href="about.php"> About Me </a>
             </li>
             <li class="w-[100px] navDefault">
-              <a href="contact.html">
+              <a href="contact.php">
                 <span class="typeIntro"></span>
               </a>
             </li>
@@ -132,23 +131,39 @@
             class="fa-solid block fa-xmark text-btn transition-all duration-500 group-hover:rotate-90 dark:text-white dark:group-hover:text-theme"></i>
         </button>
         <div>
-          <img src="assets/images/logo-2.png" alt="pucu portfolio web template" />
+          <!-- <img src="assets/images/logo-2.png" alt="pucu portfolio web template" /> -->
+          <a href="index.php">
+            <!-- <img src="assets/images/logo-2.png" alt="pucu portfolio web template" /> -->
+             <div style="
+                        color: rgba(0,0,0,0.6); text-shadow: 2px 8px 6px rgba(0,0,0,0.2), 0px -5px 35px rgba(255,255,255,0.3); font-size: 30px; letter-spacing:2px" id="demotext"><h1>SIDEBAR MENU</h1></div>
+          </a>
+          <!-- <img src="assets/images/logo-2.png" alt="pucu portfolio web template" /> -->
+          <!-- <a href="index.php">
+            <div style="
+                        color: #A7DD3C;
+background: #FFFFFF;
+text-shadow: 2px 0 0px #800040, 3px 2px 0px rgba(77,0,38,0.5), 3px 0 3px #FF002B, 5px 0 3px #800015, 6px 2px 3px rgba(77,0,13,0.5), 6px 0 9px #FF5500, 8px 0 9px #802A00, 9px 2px 9px rgba(77,25,0,0.5), 9px 0 18px #FFD500, 11px 0 18px #806A00, 12px 2px 18px rgba(77,66,0,0.5), 12px 0 30px #D4FF00, 14px 0 30px #6A8000, 15px 2px 30px rgba(64,77,0,0.5), 15px 0 45px #80FF00, 17px 0 45px #408000, 17px 2px 45px rgba(38,77,0,0.5); font-size: 30px; letter-spacing:2px" id="demotext"><h1>Emran</h1></div>
+          </a> -->
+
         </div>
       </div>
       <div class="my-[30px] border-t border-[#ddd] dark:border-btn"></div>
       <nav class="mt-[30px]">
         <ul class="grid gap-[18px]">
           <li class="text-[18px] font-semibold inline-block navActive">
-            <a href="index.html"> Home </a>
+            <a href="index.php"> Home </a>
           </li>
           <li class="text-[18px] font-semibold inline-block navDefault">
-            <a href="about.html"> About Me </a>
+            <a href="about.php"> About Me </a>
           </li>
           <li class="text-[18px] font-semibold inline-block navDefault">
-            <a href="projects.html"> Projects </a>
+            <a href="service.php"> Services </a>
           </li>
           <li class="text-[18px] font-semibold inline-block navDefault">
-            <a href="contact.html"> Contact </a>
+            <a href="projects.php"> Projects </a>
+          </li>
+          <li class="text-[18px] font-semibold inline-block navDefault">
+            <a href="contact.php"> Contact </a>
           </li>
           <!-- <li class="text-[18px] font-semibold inline-block navDefault">
             <a href="error.html"> Error </a>
@@ -183,9 +198,40 @@
             Follow Me:
           </p>
 
+
           <div class="mt-[20px] flex gap-3">
+
+          <?php
+                        include('admin/config.php');
+                        $sql = "SELECT * FROM personaldetails ORDER BY id DESC LIMIT 1";
+
+                        $result = mysqli_query($conn, $sql) or die("Query Unsuccessful");
+                        if (mysqli_num_rows($result) > 0) {
+                            $row = mysqli_fetch_assoc($result); 
+                  ?>
+
+            <a href="<?php echo $row['fblink']; ?>" class="block">
+              <i class="fa-brands fa-facebook-f socialIcon"></i>
+            </a>
+            <a href="<?php echo $row['instalink']; ?>" target="_blank" class="block">
+              <i title="Go Instagram" class="fa-brands fab fa-instagram socialIcon"></i>
+            </a>
+            <a href="<?php echo $row['githublink']; ?>" class="block">
+              <i class="fa-brands fa-github socialIcon"></i>
+            </a>
+            <a href="<?php echo $row['linkedinlink']; ?>" class="block">
+              <i class="fa-brands fa-linkedin-in socialIcon"></i>
+            </a>
+            </a>
+
+                        <?php } else {
+                          ?>
+
             <a href="#" class="block">
               <i class="fa-brands fa-facebook-f socialIcon"></i>
+            </a>
+            <a href="<?php echo $row['instalink']; ?>" target="_blank" class="block">
+              <i title="Go Instagram" class="fa-brands fab fa-instagram socialIcon"></i>
             </a>
             <a href="#" class="block">
               <i class="fa-brands fa-github socialIcon"></i>
@@ -194,7 +240,12 @@
               <i class="fa-brands fa-linkedin-in socialIcon"></i>
             </a>
             </a>
+
+                          <?php
+                        } ?>
           </div>
+
+
         </div>
       </div>
     </div>
@@ -205,12 +256,19 @@
     <section>
       <div class="container mx-auto">
         <div class="grid grid-cols-12">
-          
+          <?php
+                        include('admin/config.php');
+                        $sql = "SELECT * FROM personaldetails ORDER BY id DESC LIMIT 1";
+
+                        $result = mysqli_query($conn, $sql) or die("Query Unsuccessful");
+                        if (mysqli_num_rows($result) > 0) {
+                            $row = mysqli_fetch_assoc($result); 
+                  ?>
           <div class="col-span-12 lg:col-span-3" data-wow-duration="1.5s" data-wow-delay="0.3s">
             <div class="info-card mt-[60px]">
               <div class="rounded-[20px] bg-white px-[45px] py-[40px] dark:bg-card">
                 <div class="relative flex justify-center wow animated fadeIn">
-                  <img src="assets/images/show/ProfileImage.png" alt="pucu portfolio web template" class="w-[200px]" />
+                  <img style="    height: 200px; width: 200px; border-radius: 100%;  border: 4px solid #dbb6b6;" src="admin/assets/img/ppic/<?php echo $row['pic']; ?>" alt="pucu portfolio web template" class="w-[200px] h-[100px]" />
                   <!-- <img
                       src="assets/images/show/underline.svg"
                       alt="pucu portfolio web template"
@@ -218,11 +276,57 @@
                     /> -->
                 </div>
                 <div>
+      
                   <div class="mt-[25px]">
+                    <div class="text-center">
+                      <h3 class="text-[24px] text-danger text-btn dark:text-white wow animated fadeIn">
+                        Hy! I’m
+                        <span class="text-theme"> <?php echo $row['fname']; ?></span>
+                      </h3>
+                      <p class="text-btn dark:text-white wow animated fadeIn">
+                        <?php echo $row['desig1']; ?>
+                      </p>
+                      <p class="mt-[25px] text-[14px] text-btn dark:text-white wow animated fadeIn">
+                        <?php echo $row['email']; ?>
+                      </p>
+                      <p class="mt-1 text-[14px] text-btn dark:text-white wow animated fadeIn">
+                        <?php echo $row['pnum1']; ?>
+                      </p>
+                      <div class="mt-[30px] flex justify-center gap-3 wow animated fadeIn">
+                        <a href="<?php echo $row['fblink']; ?>" target="_blank" class="block">
+                          <i title="Go Facebook" class="fa-brands fa-facebook-f socialIcon"></i>
+                        </a>
+                        <a href="<?php echo $row['instalink']; ?>" target="_blank" class="block">
+                          <i title="Go Instagram" class="fa-brands fab fa-instagram socialIcon"></i>
+                        </a>
+                        <a href="<?php echo $row['githublink']; ?>" target="_blank" class="block">
+                          <i title="Go Github" class="fa-brands fa-github socialIcon"></i>
+                        </a>
+                        <a href="<?php echo $row['linkedinlink']; ?>" target="_blank" class="block">
+                          <i title="Go Linkedin" class="fa-brands fa-linkedin-in socialIcon"></i>
+                        </a>
+                      </div>
+                      <div class="mt-[30px] wow animated fadeIn">
+                        <a href="contact.html"
+                          class="block rounded-full border-2 border-theme bg-theme py-[10px] font-medium text-btn transition-all duration-300 dark:hover:bg-transparent dark:hover:text-theme">
+                          Hire Me!
+                        </a>
+                      </div>
+                      <div class="mt-[20px] wow animated fadeIn">
+                        <a download href="admin/assets/img/cv/<?php echo $row['cv']; ?>"
+                          class="block rounded-full border-2 border-btn bg-btn py-[10px] font-medium text-white transition-all duration-300 dark:hover:bg-transparent">
+                          Download CV
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <?php } else {
+                    ?>
+                    <div class="mt-[25px]">
                     <div class="text-center">
                       <h3 class="text-[24px] text-btn dark:text-white wow animated fadeIn">
                         Hy! I’m
-                        <span class="text-theme"> MD.ATIKUR RAHMAN</span>
+                        <!-- <span class="text-theme"> MD.ATIKUR RAHMAN</span> -->
                       </h3>
                       <p class="text-btn dark:text-white wow animated fadeIn">
                         WEB DEVELOPER
@@ -258,6 +362,7 @@
                       </div>
                     </div>
                   </div>
+                 <?php }?>
                 </div>
               </div>
             </div>

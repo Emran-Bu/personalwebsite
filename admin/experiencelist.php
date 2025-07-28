@@ -5,26 +5,27 @@ include "header.php";
 ?>
                 <main>
                     <div class="container-fluid">
-                        <h1 class="mt-4">Service List</h1>
-                        <ol class="breadcrumb mb-4">
+                        <h1 class="mt-4">Experience List</h1>
+                        <!-- <ol class="breadcrumb mb-4">
                             <li class="breadcrumb-item"><a href="dashboard.php">Dashboard</a></li>
                             <li class="breadcrumb-item active">Tables</li>
-                        </ol>
-                        <div class="card mb-4">
+                        </ol> -->
+                        <!-- <div class="card mb-4">
                             <div class="card-body">
-                                <!-- DataTables is a third party plugin that is used to generate the demo table below. For more information about DataTables, please visit the
+                                DataTables is a third party plugin that is used to generate the demo table below. For more information about DataTables, please visit the
                                 <a target="_blank" href="https://datatables.net/">official DataTables documentation</a>
-                                . -->
-                                <?php if(isset($msg)) echo $msg ?>
+                                .
+                                
                             </div>
-                        </div>
+                        </div> -->
                         <div class="card mb-4">
-                            <div class="card-header">
+                            <!-- <div class="card-header">
                                 <i class="fas fa-table mr-1"></i>
-                                <!-- DataTable Example -->
+                                DataTable Example
 
-                            </div>
+                            </div> -->
                             <div class="card-body">
+                              <?php if(isset($msg)) echo $msg ?>
                                 <div class="table-responsive">
                     <?php
 
@@ -68,9 +69,9 @@ include "header.php";
                               <td><?php echo $row['epercentage']; ?></td>
                               <td><?php echo $row['enumber']; ?></td>
                             
-                              <td class='edit'><a href='update-experience.php?id=<?php echo $row['id'];?>'><i class='fa fa-edit'></i></a></td>
+                              <td class='edit'><a title="Edit" href='update-experience.php?id=<?php echo $row['id'];?>'><i class='fa fa-edit'></i></a></td>
 
-                              <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter<?php echo $row['id']; ?>"><i class='fa fa-trash-o'></i></button> </td>
+                              <td><button title="Delete" type="button" class="btn" data-toggle="modal" data-target="#exampleModalCenter<?php echo $row['id']; ?>"><i class='fas fa-trash text-danger'></i></button> </td>
 
                               <!-- modal -->
 

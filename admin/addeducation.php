@@ -29,7 +29,7 @@ if (isset($_POST['submit'])) {
     <div class="row justify-content-center">
         <div class="col-lg-10">
             <div class="card shadow-lg border-0 rounded-lg mt-5">
-                <div class="card-header"><h3 class="text-center font-weight-light my-4">Add Your working</h3></div>
+                <div class="card-header"><h3 class="text-center font-weight-light my-4">Add Your Education</h3></div>
                 <div class="card-body">
                     <?php if(isset($msg)) echo $msg ?>
                     <form action="<?php $_SERVER['PHP_SELF']; ?>" method="post" enctype="multipart/form-data">

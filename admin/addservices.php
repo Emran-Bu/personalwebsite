@@ -63,7 +63,7 @@ if (mysqli_multi_query($conn, $sql)) {
     <div class="row justify-content-center">
         <div class="col-lg-10">
             <div class="card shadow-lg border-0 rounded-lg mt-5">
-                <div class="card-header"><h3 class="text-center font-weight-light my-4">Add Your Personal Details</h3></div>
+                <div class="card-header"><h3 class="text-center font-weight-light my-4">Add Services</h3></div>
                 <div class="card-body">
                     <?php if(isset($msg)) echo $msg ?>
                     <form action="<?php $_SERVER['PHP_SELF']; ?>" method="post" enctype="multipart/form-data">

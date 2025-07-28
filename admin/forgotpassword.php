@@ -15,25 +15,18 @@
                 $subject = "Verification Code";
                 $body = "Hi \n This is your verification code: $rand";
                 $header = "From: obujemran240@gmail.com";
-                echo $header;
-                // if (mail($to, $subject, $body, $header)) {
-                //     $_SESSION['OTP'] = $rand;
-                //     echo "sdjfdsfj";
-                //     header("location:otp.php");
-                // }
-            // mail($to, $subject, $body, $header);
-// $_SESSION['OTP'] = $rand;
-                    // echo "sdjfdsfj";
-                    // header("location:otp.php");
-            
-                    
-// echo "sdjfdsfj";
+                if (mail($to, $subject, $body, $header)) {
+                    $_SESSION['OTP'] = $rand;
+                    header("location:otp.php");
+                } else {
+                $msg = '<div class=" text-center alert alert-danger">Email are Not Send</div>';
+            }
+                
             } else {
                 $msg = '<div class=" text-center alert alert-danger">Email are Not Match</div>';
             }
         }
     }
-
 ?>
 
 <!DOCTYPE html>
@@ -63,6 +56,7 @@
                                             echo $msg;
                                         } ?>
                                         <form action="<?php $_SERVER['PHP_SELF']; ?>" method="POST">
+                                        <!-- <form action="<?php  ?>" method="POST"> -->
                                             <div class="form-group">
                                                 <label class="small mb-1" for="inputEmailAddress">Email</label>
                                                 <input class="form-control py-4" id="inputEmailAddress" type="email" aria-describedby="emailHelp" placeholder="Enter email address" name="email" />
