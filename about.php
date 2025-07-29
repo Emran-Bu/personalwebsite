@@ -84,7 +84,7 @@
                 <div class="mt-[30px] grid grid-cols-12 gap-[30px]">
                           <?php
                           
-                          $sql = "SELECT * FROM education ORDER BY id DESC";
+                          $sql = "SELECT * FROM education ORDER BY id ASC";
 
                           $result = mysqli_query($conn, $sql) or die("Query Unsuccessful");
                           if (mysqli_num_rows($result) > 0) {
@@ -108,11 +108,11 @@
                             <p class="text-[12px] text-text">
                               <?php echo $row['iname'] ?>
                             </p>
-                            <p class="mt-[5px] text-[12px] text-text font-semibold text-btn dark:text-white">Status: <?php echo $row['status'] ?></p>
-                            <p class="mt-[5px] text-[12px] text-text font-semibold text-btn dark:text-white">Result: <?php echo $row['result'] ?></p>
-                            <p class="mt-[5px] text-[12px] text-text font-semibold text-btn dark:text-white">Board: <?php echo $row['board'] ?></p> 
-                            <p class="mt-[5px] text-[12px] text-text font-semibold text-btn dark:text-white">Passing Year: <?php echo $row['pyear'] ?></p>
-                            <p class="mt-[5px] text-[12px] text-text font-semibold text-btn dark:text-white">Duration: <?php echo $row['duration'] ?></p>
+                            <p class="mt-[5px] text-[12px] text-text font-semibold text-btn dark:text-white"><?php echo $row['status'] ?></p>
+                            <p class="mt-[5px] text-[12px] text-text font-semibold text-btn dark:text-white"><?php echo $row['result'] ?></p>
+                            <p class="mt-[5px] text-[12px] text-text font-semibold text-btn dark:text-white"><?php echo $row['board'] ?></p> 
+                            <p class="mt-[5px] text-[12px] text-text font-semibold text-btn dark:text-white"><?php echo $row['pyear'] ?></p>
+                            <p class="mt-[5px] text-[12px] text-text font-semibold text-btn dark:text-white"><?php echo $row['duration'] ?></p>
                           </div>
                         </div>
                       </div>

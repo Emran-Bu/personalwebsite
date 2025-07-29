@@ -10,7 +10,7 @@
                             <div class="col-xl-3 col-md-6">
                                 <div class="card bg-primary text-white mb-4">
                                     <?php
-                                    $sql = "SELECT COUNT(*) FROM experience";
+                                    $sql = "SELECT * FROM experience";
                                     $result = mysqli_query($conn, $sql) or die("Query Unsuccessful");
                                     $row = mysqli_num_rows($result);
                                     ?>
@@ -25,7 +25,7 @@
                             <div class="col-xl-3 col-md-6">
                                 <div class="card bg-warning text-white mb-4">
                                     <?php
-                                    $sql = "SELECT COUNT(*) FROM services";
+                                    $sql = "SELECT * FROM services";
                                     $result = mysqli_query($conn, $sql) or die("Query Unsuccessful");
                                     $row = mysqli_num_rows($result);
                                     ?>
@@ -39,7 +39,7 @@
                             <div class="col-xl-3 col-md-6">
                                 <div class="card bg-success text-white mb-4">
                                     <?php
-                                    $sql = "SELECT COUNT(*) FROM projects";
+                                    $sql = "SELECT * FROM projects";
                                     $result = mysqli_query($conn, $sql) or die("Query Unsuccessful");
                                     $row = mysqli_num_rows($result);
                                     ?>
@@ -53,7 +53,7 @@
                             <div class="col-xl-3 col-md-6">
                                 <div class="card bg-danger text-white mb-4">
                                     <?php
-                                    $sql = "SELECT COUNT(*) FROM workhistory";
+                                    $sql = "SELECT * FROM workhistory";
                                     $result = mysqli_query($conn, $sql) or die("Query Unsuccessful");
                                     $row = mysqli_num_rows($result);
                                     ?>

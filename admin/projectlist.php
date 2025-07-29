@@ -5,7 +5,7 @@ include "header.php";
 ?>
                 <main>
                     <div class="container-fluid">
-                        <h1 class="mt-4">Projects List</h1>
+                        <h2 class="my-4">Projects List</h2>
                         <!-- <ol class="breadcrumb mb-4">
                             <li class="breadcrumb-item"><a href="dashboard.php">Dashboard</a></li>
                             <li class="breadcrumb-item active">Tables</li>

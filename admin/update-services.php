@@ -76,7 +76,7 @@ include "header.php";
     <div class="row justify-content-center">
         <div class="col-lg-10">
             <div class="card shadow-lg border-0 rounded-lg mt-5">
-                <div class="card-header"><h3 class="text-center font-weight-light my-4">Update Your Personal Details</h3></div>
+                <div class="card-header"><h3 class="text-center font-weight-light my-4">Update Your Services</h3></div>
                 <div class="card-body">
 
                         <?php if(isset($msg)) echo $msg ?>

@@ -5,7 +5,10 @@ include "header.php";
 ?>
                 <main>
                     <div class="container-fluid">
-                        <h1 class="mt-4">Profile Setting</h1>
+                      
+                        <h2 class="mt-4">Profile Setting</h2>
+                        <!-- <div class=" my-4 text-center"><i class="fas fa-user display-1"></i></div> -->
+                        <div class="justify-content-center d-flex my-3"><img class="card-img-top" style="height:180px ; width: 180px"  src="assets/img/normal/permission.png" alt="" srcset=""></div>
                         <!-- <ol class="breadcrumb mb-4">
                             <li class="breadcrumb-item"><a href="dashboard.php">Dashboard</a></li>
                             <li class="breadcrumb-item active">Tables</li>

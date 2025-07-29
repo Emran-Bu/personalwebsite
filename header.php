@@ -307,7 +307,7 @@ text-shadow: 2px 0 0px #800040, 3px 2px 0px rgba(77,0,38,0.5), 3px 0 3px #FF002B
                         </a>
                       </div>
                       <div class="mt-[30px] wow animated fadeIn">
-                        <a href="contact.html"
+                        <a href="contact.php"
                           class="block rounded-full border-2 border-theme bg-theme py-[10px] font-medium text-btn transition-all duration-300 dark:hover:bg-transparent dark:hover:text-theme">
                           Hire Me!
                         </a>
@@ -349,7 +349,7 @@ text-shadow: 2px 0 0px #800040, 3px 2px 0px rgba(77,0,38,0.5), 3px 0 3px #FF002B
                         </a>
                       </div>
                       <div class="mt-[30px] wow animated fadeIn">
-                        <a href="contact.html"
+                        <a href="contact.php"
                           class="block rounded-full border-2 border-theme bg-theme py-[10px] font-medium text-btn transition-all duration-300 dark:hover:bg-transparent dark:hover:text-theme">
                           Hire Me!
                         </a>

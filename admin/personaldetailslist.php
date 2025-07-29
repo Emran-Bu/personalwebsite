@@ -4,7 +4,7 @@ include "header.php";
 ?>
                 <main>
                     <div class="container-fluid">
-                        <h1 class="mt-4">Personal Details List</h1>
+                        <h2 class="my-4">Personal Details List</h2>
                         <!-- <ol class="breadcrumb mb-4">
                             <li class="breadcrumb-item"><a href="dashboard.php">Dashboard</a></li>
                             <li class="breadcrumb-item active">Tables</li>
@@ -37,7 +37,7 @@ include "header.php";
                                     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                         <thead>
                                             <tr>
-                                                <th>Id</th>
+                                                <th>ID</th>
                                                 <th>First Name</th>
                                                 <th>Last Name</th>
                                                 <th>Designation 1</th>
@@ -49,6 +49,7 @@ include "header.php";
                                                 <th>Github Link</th>
                                                 <th>Linkedin Link</th>
                                                 <th>Twitter Link</th>
+                                                <th>Email</th>
                                                 <th>CV</th>
                                                 <th>Profile Pic</th>
                                                 <th>Edit</th>
@@ -69,8 +70,9 @@ include "header.php";
                                                 <th>Github Link</th>
                                                 <th>Linkedin Link</th>
                                                 <th>Twitter Link</th>
-                                                <th>Profile Pic</th>
+                                                <th>Email</th>
                                                 <th>CV</th>
+                                                <th>Profile Pic</th>
                                                 <th>Edit</th>
                                                 <th>Delete</th>
                                             </tr>
@@ -93,6 +95,7 @@ include "header.php";
                               <td><?php echo $row['githublink']; ?></td>
                               <td><?php echo $row['linkedinlink']; ?></td>
                               <td><?php echo $row['twitterlink']; ?></td>
+                              <td><?php echo $row['email']; ?></td>
                               <td><?php echo $row['cv']; ?></td>
                               <!-- <td><?php //echo $row['pic']; ?></td> -->
                               <td><img height="100px" width="100px" src="assets/img/ppic/<?php echo $row['pic']; ?>" alt=""></td>

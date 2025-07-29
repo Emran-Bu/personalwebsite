@@ -47,9 +47,10 @@
                 <main>
                     <div class="container">
                         <div class="row justify-content-center">
-                            <div class="col-lg-5">
+                            <div class="col-lg-5 mb-5">
                                 <div class="card shadow-lg border-0 rounded-lg mt-5">
-                                    <div class="card-header"><h3 class="text-center font-weight-light my-4">Password Recovery</h3></div>
+                                    <div class="justify-content-center d-flex mt-4"><img class="card-img-top" style="height:150px ; width: 150px"  src="assets/img/normal/passkey.png" alt="" srcset=""></div>
+                                    <div class="card-header"><h3 class="text-center font-weight-light my-2">Password Recovery</h3></div>
                                     <div class="card-body">
                                         <div class="small mb-3 text-muted">Enter your email address and we will send you a OTP to reset your password.</div>
                                         <?php if (isset($msg)) {
