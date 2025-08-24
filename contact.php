@@ -156,7 +156,7 @@ include('admin/config.php');
                     <div class="contact-map">
                       <iframe
                         title="map"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7302.895531868613!2d90.33542767167094!3d23.76706445269667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c083149585f5%3A0xeb28ac94751626ca!2sBangladesh%20University!5e0!3m2!1sen!2sbd!4v1747081504593!5m2!1sen!2sbd" width="975" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7302.895531868613!2d90.33542767167094!3d23.76706445269667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c083149585f5%3A0xeb28ac94751626ca!2sBangladesh%20University!5e0!3m2!1sen!2sbd!4v1747081504593!5m2!1sen!2sbd" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
                         height="470"
                         width="100%"
                       ></iframe>

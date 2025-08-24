@@ -17,7 +17,7 @@
                       <h2
                         class="text-[42px] wow animated fadeIn leading-[52px] text-btn dark:text-white md:text-[62px] md:leading-[72px]"
                       >
-                        Our Best Service<span class="text-theme">!</span>
+                        My Best Service<span class="text-theme">!</span>
                       </h2>
                       <p class="text-[14px] text-text wow animated fadeIn">
                         The imperative for integrated, expansive, and seamless
